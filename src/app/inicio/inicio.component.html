@@ -1,0 +1,40 @@
+<html>
+   <head>
+      <title>Adata</title>
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+   </head>
+   <body>
+      <div class="d-flex vh-100">
+         <div class="d-flex flex-fill justify-content-center align-items-center login-banner">
+            <div class="col-10 p-0 d-flex justify-content-center m-auto">
+               <img src="assets/imagen.jpeg" alt="imagen" width="508" height="411">
+            </div>
+         </div>
+         <div class="d-flex flex-fill justify-content-center align-items-center login-form overflow-auto p-4">
+            <div class="d-flex align-self-center flex-column w-100">
+               <h1 class="font-24 mb-2">Bienvenido!</h1>
+               <p class="mb-4 font-18">Por favor ingrese sus credenciales para acceder a su cuenta.</p>
+               <form (ngSubmit)="login()">
+                  <div class="mb-4">
+                     <div class="form-group ">
+                        <label>Usuario</label>
+                        <input autofocus="true" class="form-control" id="user-email"  [(ngModel)]="username" name="Usuario" placeholder="Usuario" type="text" value="">
+                     </div>
+                     <div class="form-group has-error ">
+                        <label>Contraseña</label>
+                        <input class="form-control" id="user-password" name="Contraseña" [(ngModel)]="password" placeholder="Contraseña" type="password" value="">
+                     </div>
+                  </div>
+                  <div class="d-flex flex-row">
+                     <button type="submit" class="btn btn-primary btn-lg px-4 float-right">Iniciar sesión</button>
+                  </div>
+               </form>
+               <span class="mt-4 text-danger" id="err-login-message"></span>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
